@@ -35,10 +35,7 @@ public enum VideoMetadata {
   VMAP(
       "https://storage.googleapis.com/gvabox/media/samples/stock.mp4",
       "VMAP",
-      "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/"
-          + "ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp"
-          + "&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite"
-          + "%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator=",
+      "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/95250053/VIDIO_ANDROID_PREROLL_STREAMING&impl=s&gdfp_req=1&env=vp&output=vmap&ad_rule=1&vad_type=linear&cmsid=2519752&vid=204&pp=no%20vpaid&unviewed_position_start=1&url=com.vidio.android&correlator=[timestamp]&cust_params=vidio_embed%3D$isEmbed$%26vidio_user%3Dsctv%26vidio_embed_site%3D$vidioEmbedSite$%26vidio_id%3D204%26vidio_categories%3Dentertainment%26vidio_tag%3D$vidioTags$%26vidio_user_id%3D4%26app_version%3D5.49%26livestreaming_tag%3Dentertainment%2Cindonesia-entertainmen-produksi&description_url=https%3A%2F%2Fwww.vidio.com%2Flive%2F204",
       R.drawable.thumbnail1,
       true),
   VMAP_PODS(

@@ -99,12 +99,13 @@ public class VideoPlayerController {
               // These are the suggested event types to handle. For full list of all ad
               // event types, see the documentation for AdEvent.AdEventType.
               switch (adEvent.getType()) {
+                case AD_BREAK_READY:
+                  adsManager.start();
                 case LOADED:
                   // AdEventType.LOADED will be fired when ads are ready to be
                   // played. AdsManager.start() begins ad playback. This method is
                   // ignored for VMAP or ad rules playlists, as the SDK will
-                  // automatically start executing the playlist.
-                  adsManager.start();
+                  // automatically start executing the playlist
                   break;
                 case CONTENT_PAUSE_REQUESTED:
                   // AdEventType.CONTENT_PAUSE_REQUESTED is fired immediately before
@@ -164,6 +165,7 @@ public class VideoPlayerController {
     sdkFactory = ImaSdkFactory.getInstance();
     ImaSdkSettings imaSdkSettings = sdkFactory.createImaSdkSettings();
     imaSdkSettings.setLanguage(language);
+    imaSdkSettings.setAutoPlayAdBreaks(false);
 
     adDisplayContainer =
         ImaSdkFactory.createAdDisplayContainer(
@@ -188,6 +190,7 @@ public class VideoPlayerController {
         new View.OnClickListener() {
           @Override
           public void onClick(View view) {
+            resumeContent();
             requestAndPlayAds(-1);
           }
         });
